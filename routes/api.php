@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\TeamController;
@@ -28,7 +29,9 @@ Route::get('/delete-team/{id}',[TeamController::class, 'delete']);
 
 Route::post('/user',[UserController::class, 'store']);
 Route::post('/login',[UserController::class, 'login']);
+Route::post('/contact',[ContactController::class, 'store']);
 
-Route::get('/authenticate',[AuthController::class, 'Authentication']);
+
+// Route::get('/authenticate',[AuthController::class, 'Authentication']);
 
  
